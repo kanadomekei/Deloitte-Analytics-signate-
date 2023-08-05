@@ -1,0 +1,96 @@
+データ説明
+学習用試合データ（train.csv）
+データ数 ： 3,366
+データ説明 ： 対戦カードとその対戦の観客数等を記したデータです。
+注意事項  ： 文字コードは「UTF-8」です。Excel などで開くと日本語が文字化けしますのでご注意ください。
+
+カラム	ヘッダ名称	データ型	説明
+0	id	int	対戦カードID
+1	match_date	varchar	開催日
+2	kick_off_time	varchar	キックオフ時刻
+3	section	varchar	開催節
+4	round	varchar	開催区分
+5	home_team	varchar	ホームチーム
+6	away_team	varchar	アウェイチーム
+7	venue	varchar	会場
+8	weather	varchar	天気
+9	temperature	varchar	気温
+10	humidity	int	湿度
+11	broadcasters	varchar	TV放送
+12	attendance	int	観客動員数（目的変数）
+評価用試合データ（test.csv）
+データ数 ： 459
+データ説明 ： 対戦カードを記したデータです。
+注意事項  ： 文字コードは「UTF-8」です。Excel などで開くと日本語が文字化けしますのでご注意ください。
+
+カラム	ヘッダ名称	データ型	説明
+0	id	int	対戦カードID
+1	match_date	varchar	開催日
+2	kick_off_time	varchar	キックオフ時刻
+3	section	varchar	開催節
+4	round	varchar	開催区分
+5	home_team	varchar	ホームチーム
+6	away_team	varchar	アウェイチーム
+7	venue	varchar	会場
+8	weather	varchar	天気
+9	temperature	varchar	気温
+10	humidity	int	湿度
+11	broadcasters	varchar	TV放送
+会場情報（venue_information.csv）
+データ数 ： 63
+データ説明 ： 試合会場のスタジアムに関する詳細データです。
+注意事項  ： 文字コードは「UTF-8」です。Excel などで開くと日本語が文字化けしますのでご注意ください。
+
+カラム	ヘッダ名称	データ型	説明
+0	venue	varchar	会場
+1	capacity	int	収容人数
+2	address	varchar	所在地
+試合詳細データ（match_reports.csv）
+
+データ数 ： 3,825
+データ説明 ： 各試合の詳細データです。
+注意事項  ： 文字コードは「UTF-8」です。Excel などで開くと日本語が文字化けしますのでご注意ください。
+
+カラム	ヘッダ名称	データ型	説明
+0	id	int	対戦カードID
+1	home_team_player11	varchar	ホームチーム先発メンバー11
+2	home_team_player10	varchar	ホームチーム先発メンバー10
+3	home_team_player9	varchar	ホームチーム先発メンバー9
+4	home_team_player8	varchar	ホームチーム先発メンバー8
+5	home_team_player7	varchar	ホームチーム先発メンバー7
+6	home_team_player6	varchar	ホームチーム先発メンバー6
+7	home_team_player5	varchar	ホームチーム先発メンバー5
+8	home_team_player4	varchar	ホームチーム先発メンバー4
+9	home_team_player3	varchar	ホームチーム先発メンバー3
+10	home_team_player2	varchar	ホームチーム先発メンバー2
+11	home_team_player1	varchar	ホームチーム先発メンバー1
+12	home_team_score	int	ホームチームスコア
+13	away_team_score	int	アウェイチームスコア
+14	away_team_player1	varchar	アウェイチーム先発メンバー1
+15	away_team_player2	varchar	アウェイチーム先発メンバー2
+16	away_team_player3	varchar	アウェイチーム先発メンバー3
+17	away_team_player4	varchar	アウェイチーム先発メンバー4
+18	away_team_player5	varchar	アウェイチーム先発メンバー5
+19	away_team_player6	varchar	アウェイチーム先発メンバー6
+20	away_team_player7	varchar	アウェイチーム先発メンバー7
+21	away_team_player8	varchar	アウェイチーム先発メンバー8
+22	away_team_player9	varchar	アウェイチーム先発メンバー9
+23	away_team_player10	varchar	アウェイチーム先発メンバー10
+24	away_team_player11	varchar	アウェイチーム先発メンバー11
+休日情報（holidays_in_japan.csv）
+データ数 ： 234
+データ説明 ： 祝日データです
+
+カラム	ヘッダ名称	データ型	説明
+0	holiday_date	varchar	日付
+1	description	varchar	祝日
+応募用サンプルファイル（sample_submit.csv）
+データ数 ： 459
+データ説明 ： サンプルの予測結果が入力された投稿用ファイルのフォーマット
+
+カラム	ヘッダ名称	データ型	説明
+0	無し	int	対戦カードID
+1	無し	int	観客動員数 (ここを予測して下さい!)
+投稿方法
+応募用サンプルファイルのフォーマットに倣い、1列目に評価用データの対戦カードIDを、2列目に予測した観客数を記入したファイルを作成し、ヘッダ無しのcsv形式で投稿ください。
+
